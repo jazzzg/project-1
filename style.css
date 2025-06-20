@@ -125,7 +125,7 @@ nav ul li a:hover {
       gap:20px
     }  
     .image-row img {
-      max-width: 200px;
+      max-width: flex;
       margin-bottom:0;
     }
     footer {
