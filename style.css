@@ -16,7 +16,7 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap:100px;
+  gap:20px;
   
 }
 nav ul li a {
