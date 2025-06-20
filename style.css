@@ -13,11 +13,6 @@ header {
   font-size: 40px;
   color: white;
 }
-
-.logo img {
-  height: 40px;
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -26,7 +21,6 @@ nav ul {
 }
 nav ul li a {
   color: white;
-  margin: 8px;
   font-size: 18px;
 }
 nav ul li a:hover {
