@@ -124,6 +124,10 @@ nav ul li a:hover {
       justify-content: center;
       gap:20px
     }  
+    .image-row img {
+      max-width: 200px;
+      margin-bottom:0;
+    }
     footer {
       text-align: center;
       padding: 20px;
