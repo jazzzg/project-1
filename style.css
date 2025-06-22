@@ -21,6 +21,10 @@ header {
   color: white;
   cursor: default;
 }
+nav {
+  background-color: #070431;
+  display: flex;
+}
 nav ul {
   list-style: none;
   display: flex;
