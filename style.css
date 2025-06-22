@@ -12,7 +12,6 @@ body {
 }
 
 header {
-  position: relative;
   display: flex;
   align-items: center;
   background-color: #070431;
@@ -27,12 +26,8 @@ header {
   cursor: default;
 }
 nav { 
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
   display: flex;
+  flex: 1;
   justify-content: center; 
   align-items: center;
   background-color: #070431;
