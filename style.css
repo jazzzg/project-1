@@ -28,6 +28,7 @@ header {
 nav {
   background-color: #070431;
   display: flex;
+  justify-content: center;
 }
 nav ul {
   list-style: none;
