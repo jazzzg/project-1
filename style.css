@@ -4,21 +4,19 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #070431;
-  padding: 0 10px;
-  margin: 0;
+  padding: 10px 20px;
 }
 
 .logo h1 {
   margin: 5px;
   font-size: 40px;
-  color: black;
+  color: white;
+  cursor: default;
 }
 nav ul {
-  list-style: upper-alpha;
+  list-style: none;
   display: flex;
-  gap: 0px;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
 
 nav ul li a {
@@ -26,25 +24,11 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
 nav {
   background-color: #070431;
   padding: 10px;
 }
-nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}
+
 /* Basic Reset */
 * {
   margin: 0;
@@ -56,44 +40,7 @@ body {
   font-family: Arial, sans-serif;
   background: white;
   color: #070431;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #070431;
-  padding: 10px 20px;
-  color: white;
-}
-
-.logo h1 {
-  font-size: 24px;
-  cursor: default;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;v {
-  background-color: #070431;
-  padding: 10px;
-}
-body {
- font-family: Arial, sans-serif;
- background: white;
- color: #070431;
- margin: 0;
+  margin: 0;
 }
 
 
