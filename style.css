@@ -51,35 +51,6 @@ nav ul li a:hover {
 }
 
 
-/* Ocultar submenú por defecto */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #070431;
-  padding: 0;
-  list-style: none;
-  min-width: 150px;
-  z-index: 10;
-}
-
-/* Mostrar al pasar el mouse */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li a {
-  padding: 10px;
-  color: white;
-  font-size: 16px;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #1a1655;
-}
-
-
 
     main {
       max-width: 900px;
