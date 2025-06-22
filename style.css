@@ -13,7 +13,6 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #070431;
   padding: 10px 20px;
@@ -21,14 +20,17 @@ header {
 
 .logo h1 {
   margin: 0;
+  justify-content: start;
   font-size: 40px;
   color: white;
   cursor: default;
 }
-nav {
-  background-color: #070431;
+nav { 
   display: flex;
-  justify-content: center;
+  flex: 1;
+  justify-content: center; 
+  background-color: #070431;
+  
 }
 nav ul {
   list-style: none;
