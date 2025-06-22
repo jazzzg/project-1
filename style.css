@@ -4,6 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #070431;
+  padding: 10px 20px;
 }
 
 .logo h1 {
@@ -16,6 +17,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
