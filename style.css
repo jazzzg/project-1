@@ -6,15 +6,15 @@ css
 }
 body {
   font-family: Arial, sans-serif;
-  background: #F5F5DC;
-  color: #000080;
+  background: #E5D2BD;
+  color: #1F3C66;
   margin: 0;
 }
 
 header {
   display: flex;
   align-items: center;
-  background-color: #000080;
+  background-color: #1F3C66;
   padding: 10px 20px;
 }
 
@@ -39,7 +39,7 @@ header {
     main h2 {
       font-size: 36px;
       margin-bottom: 20px;
-      color: #000080;
+      color: #1F3C66;
     }
 
     main p {
@@ -64,7 +64,7 @@ header {
       text-align: center;
       padding: 20px;
       background-color: white;
-      color: #000080;
+      color: #1F3C66;
       margin-top: 40px;
       font-size: 15px;
     }
