@@ -9,7 +9,7 @@ body {
   background: #99ccff;
   color: #070431;
   margin: 0;
-
+}
 
 header {
   display: flex;
@@ -77,4 +77,4 @@ header {
     font-size:20px;
     color: blue;
   }
-  }
+  
