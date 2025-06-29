@@ -81,12 +81,16 @@ header {
       display: inline-block;
       font-weight: 100;
     }
-
-  .listado-de-temas ul {
+  ,listado-de-temas ul{
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  .listado-de-temas ul a {  
     text-decoration: none;
     color: black;
-    margin-top: 20px;
+    display: inline;
+  }
+  .listado-de-temas li {
     margin-bottom: 10px;
   }
   .sub-titulos {
