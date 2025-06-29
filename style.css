@@ -9,7 +9,7 @@ body {
   color: #1F3C66;
   margin: 0;
 }
-<!-- this is for the logo y la parte de arriba de la pagina-->
+/* this is for the logo y la parte de arriba de la pagina*/
 header {
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ header {
       margin-top: 40px;
       font-size: 15px;
     }
-    <!--esto para el box debajo de la imagen para poder ir a cada materia-->
+    /*esto para el box debajo de la imagen para poder ir a cada materia*/
     .link-materias {
       font-size: 20px;
       text-decoration: none;
