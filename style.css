@@ -81,8 +81,12 @@ header {
       display: inline-block;
       font-weight: 100;
     }
-  .link-temas {
-    font-size:20px;
-    color: blue;
+
+  .listado-de-temas {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   
