@@ -70,9 +70,16 @@ header {
       font-size: 15px;
     }
     .link-materias {
-      font-size: 24px;
-      color: black;
-      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      background-color: rgb(87, 39, 119);
+      color: white;
+      width: 320px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 15px;
+      display: inline-block;
+      font-weight: 100;
     }
   .link-temas {
     font-size:20px;
