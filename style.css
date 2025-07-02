@@ -125,6 +125,7 @@ header {
     text-align: left;
   }
   details ul li a {
+    color: white;
     text-decoration: none;
   }
   
