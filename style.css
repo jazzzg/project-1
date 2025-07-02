@@ -123,6 +123,8 @@ header {
     font-size: 1.75vw;
     color: white;
     text-align: left;
+  }
+  details ul li a {
     text-decoration: none;
   }
   
