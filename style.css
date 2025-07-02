@@ -4,99 +4,149 @@ css
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: Arial, sans-serif;
   color: #1F3C66;
-  margin: 0;
+  width: 100vw;    /* Ocupa todo el ancho de la ventana */
+  overflow-x: hidden; /* Evita scroll horizontal innecesario */
 }
-/* this is for the logo y la parte de arriba de la pagina*/
+
+/* Header */
 header {
   display: flex;
   align-items: center;
   background-color: #412d70;
-  padding: 10px 20px;
+  padding: 1em 2vw; /* padding relativo a la pantalla */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo h1 {
-  margin: 0;
-  justify-content: start;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: white;
   cursor: default;
 }
 
+/* Main */
+main {
+  width: 100%;
+  padding: 2em 2vw;
+  text-align: center;
+}
 
+main h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 3em;
+  color: black;
+}
 
+main p {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  margin-bottom: 2.5em;
+  color: black;
+}
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+/* Fila de materias con scroll horizontal */
+.image-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 5vw;
+  padding: 0 2vw 1em 2vw;
+  margin-bottom: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch; /* scroll suave en iOS */
+}
 
-    main h2 {
-      font-size: 36px;
-      margin-bottom: 100px;
-      color: black;
-    }
+.materia {
+  flex: 0 0 auto;
+  text-align: center;
+}
 
-    main p {
-      font-size: 24px;
-      line-height: 1.6;
-      margin-bottom: 75px;
-      color: black;
-    }
+.image-row img {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
 
-    main img {
-      max-width: 320px;
-      height: 240px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-    }
+/* Botones de materias */
+.link-materias {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-decoration: none;
+  background-color: rgb(87, 39, 119);
+  color: white;
+  padding: 0.75em 1em;
+  border-radius: 15px;
+  display: inline-block;
+  width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  font-weight: 100;
+}
 
-    .image-row {
-      display: flex;
-      justify-content: center;
-      gap:200px
-    }  
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: white;
-      color: #1F3C66;
-      margin-top: 40px;
-      font-size: 15px;
-    }
-    /*esto para el box debajo de la imagen para poder ir a cada materia*/
-    .link-materias {
-      font-size: 20px;
-      text-decoration: none;
-      background-color: rgb(87, 39, 119);
-      color: white;
-      width: 320px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 15px;
-      display: inline-block;
-      font-weight: 100;
-    }
-  .listado-de-temas ul{
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* Listado de temas */
+.listado-de-temas ul {
+  font-size: 1.25rem;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  padding-left: 1.2em;
+}
+
+.listado-de-temas ul a {  
+  text-decoration: none;
+  color: black;
+  display: inline;
+  text-align: left;
+}
+
+.listado-de-temas li {
+  margin-bottom: 0.6em;
+}
+
+.sub-titulos {
+  text-align: left;
+  color: black;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5em 2vw;
+  background-color: white;
+  color: #1F3C66;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3em;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 2rem;
   }
-  .listado-de-temas ul a {  
-    text-decoration: none;
-    color: black;
-    display: inline;
-    text-align: left;
+
+  main h2 {
+    margin-bottom: 2em;
   }
-  .listado-de-temas li {
-    margin-bottom: 10px;
+
+  .link-materias {
+    width: 90vw;
   }
-  .sub-titulos {
-    text-align: left;
-    color: black;
+
+  .listado-de-temas ul {
+    font-size: 1.1rem;
   }
+}
+
   
