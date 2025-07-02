@@ -112,10 +112,6 @@ header {
   details[open] {
     background-color:#412d70;
   }
-  ul li {
-    color: black;
-    text-align: left;
-  }
   .style-toggle-list {
     border: 2px solid #412d70;
     border-radius: 10px;
@@ -126,5 +122,7 @@ header {
   details ul li {
     font-size: 1.75vw;
     color: white;
+    text-align: left;
+    text-decoration: none;
   }
   
