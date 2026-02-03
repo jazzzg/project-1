@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resúmenes - Los Boonie Bears</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+    <style>
+        /* Estilos específicos para página de resúmenes */
+        :root {
+            --beige-claro: #F5F5DC;
+            --marron-oscuro: #5B4513;
+            --chocolate: #D2691E;
+            --burlywood: #DEB887;
+            --beige-medio: #F0E6D2;
+            --white: #FFFFFF;
+            --shadow: rgba(91, 69, 19, 0.1);
+        }
+        
+        .resumenes-hero {
+            background: linear-gradient(135deg, var(--beige-claro) 0%, var(--beige-medio) 100%);
+            padding: 150px 0 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .resumenes-container {
+            padding: 60px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .filtros {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filtro-btn {
+            padding: 10px 25px;
+            background-color: var(--white);
+            border: 2px solid var(--burlywood);
+            border-radius: 30px;
+            color: var(--marron-oscuro);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filtro-btn.active,
+        .filtro-btn:hover {
+            background-color: var(--chocolate);
+            color: var(--white);
+            border-color: var(--chocolate);
+        }
+        
+        .grid-resumenes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .resumen-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(222, 184, 135, 0.3);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .resumen-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(91, 69, 19, 0.15);
+        }
+        
+        .card-imagen {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .resumen-card:hover .card-imagen img {
+            transform: scale(1.05);
+        }
+        
+        .card-categoria {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--chocolate);
+            color: var(--white);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .card-contenido {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-titulo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--marron-oscuro);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .card-descripcion {
+            color: var(--marron-oscuro);
+            opacity: 0.8;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(222, 184, 135, 0.3);
+            color: var(--chocolate);
+            font-size: 0.9rem;
+        }
+        
+        .card-acciones {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn-ver {
+            flex-grow: 1;
+            background-color: var(--chocolate);
+            color: var(--white);
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-ver:hover {
+            background-color: var(--marron-oscuro);
+            transform: translateY(-2px);
+        }
+        
+        .btn-descargar {
+            background-color: transparent;
+            color: var(--chocolate);
+            border: 2px solid var(--chocolate);
+            padding: 10px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-descargar:hover {
+            background-color: var(--chocolate);
+            color: var(--white);
+        }
+        
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(91, 69, 19, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--marron-oscuro);
+            cursor: pointer;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            background-color: var(--beige-claro);
+        }
+        
+        .modal-header {
+            padding: 40px 40px 20px;
+            border-bottom: 1px solid rgba(222, 184, 135, 0.3);
+        }
+        
+        .modal-body {
+            padding: 20px 40px 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-resumenes {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .filtros {
+                gap: 10px;
+            }
+            
+            .filtro-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .modal-content {
+                max-height: 85vh;
+            }
+            
+            .modal-header,
+            .modal-body {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .grid-resumenes {
+                grid-template-columns: 1fr;
+            }
+            
+            .card-acciones {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (mismo que index.html) -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="logo-title">Los Boonie Bears</h1>
+                        <p class="logo-subtitle">Centro de Aprendizaje</p>
+                    </div>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resumenes.html" class="nav-link active">
+                            <i class="fas fa-book"></i>
+                            <span>Resúmenes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ejercicios.html" class="nav-link">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Ejercicios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="recursos.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Recursos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section Resúmenes -->
+    <section class="resumenes-hero">
+        <div class="container">
+            <h1 class="hero-title">Biblioteca de Resúmenes</h1>
+            <p class="hero-description">
+                Colección organizada de materiales de estudio. Filtra por categoría o busca el tema que necesitas.
+            </p>
+            <div class="search-box" style="max-width: 500px; margin: 30px auto;">
+                <input type="text" id="buscador" placeholder="Buscar resumenes..." 
+                       style="width: 100%; padding: 15px 20px; border-radius: 30px; 
+                              border: 2px solid var(--burlywood); font-size: 1rem;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filtros">
+            <button class="filtro-btn active" data-categoria="todos">Todos</button>
+            <button class="filtro-btn" data-categoria="matematicas">Matemáticas</button>
+            <button class="filtro-btn" data-categoria="ciencias">Ciencias</button>
+            <button class="filtro-btn" data-categoria="historia">Historia</button>
+            <button class="filtro-btn" data-categoria="literatura">Literatura</button>
+            <button class="filtro-btn" data-categoria="idiomas">Idiomas</button>
+        </div>
+    </div>
+
+    <!-- Grid de Resúmenes -->
+    <main class="resumenes-container">
+        <div class="grid-resumenes" id="grid-resumenes">
+            <!-- Los resúmenes se cargan dinámicamente con JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal para ver resumen completo -->
+    <div class="modal-overlay" id="modal-resumen">
+        <div class="modal-content">
+            <button class="modal-close" id="cerrar-modal">&times;</button>
+            <div class="modal-header">
+                <h2 id="modal-titulo"></h2>
+                <div class="card-meta" id="modal-meta"></div>
+            </div>
+            <div class="modal-body">
+                <div id="modal-contenido"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3 class="logo-title">Los Boonie Bears</h3>
+                            <p class="logo-subtitle">Centro de Aprendizaje</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Plataforma educativa dedicada a proporcionar recursos de calidad para el aprendizaje continuo.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="resumenes.html"><i class="fas fa-chevron-right"></i> Resúmenes</a></li>
+                        <li><a href="ejercicios.html"><i class="fas fa-chevron-right"></i> Ejercicios</a></li>
+                        <li><a href="recursos.html"><i class="fas fa-chevron-right"></i> Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> info@booniebears.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad del Aprendizaje</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Los Boonie Bears - Centro de Aprendizaje. Todos los derechos reservados.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="resumenes.js"></script>
+</body>
+</html>
