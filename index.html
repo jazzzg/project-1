@@ -1,31 +1,314 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Boonie Bears - Centro de Aprendizaje</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐻</text></svg>">
 </head>
 <body>
-<header>
-  <div class = "logo">
-    <h1>Jaz Z.</h1>
-  </div>
-</header>
+    <!-- Navegación -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo y título -->
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="logo-title">Los Boonie Bears</h1>
+                        <p class="logo-subtitle">Centro de Aprendizaje</p>
+                    </div>
+                </div>
 
-<main>
-  <h2>Apuntes, resúmenes, explicaciones y ejercicios</h2>
-    <p>Esta página ofrece recursos gratis para el colegio</p>
-<div class="image-row">
-  <div>
-      <img src="https://i.pinimg.com/736x/9b/98/88/9b988878a7f49ccfddbc5c7c4e096dfc.jpg" width="320px" height="240px" alt="funciones"/>
-      <a href="materias/matematica.html" class="link-materias">Matemática</a>
-  </div>
-  <div>
-      <img src="https://www.shutterstock.com/image-vector/continuous-line-drawing-chemical-lab-600nw-776650114.jpg"width="320px" height="240px"  alt="tubos de ensayo"/>
-      <a href="materias/biologia.html" class="link-materias">Biología</a>
-  </div>
-  <div>
-      <img src="images/historia.JPG"width="320px" height="240px"  alt="historia"/> 
-      <a href="materias/historia.html" class="link-materias">Historia</a>
-  </div>  
-</div>
-</main>
+                <!-- Menú de navegación -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resumenes" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            <span>Resúmenes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ejercicios" class="nav-link">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Ejercicios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#recursos" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Recursos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Botón de menú móvil -->
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Bienvenido a Los Boonie Bears</h2>
+                    <p class="hero-description">
+                        Un espacio educativo profesional donde el aprendizaje se encuentra con la innovación. 
+                        Explora nuestros recursos, resúmenes y ejercicios diseñados para potenciar tu conocimiento.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#resumenes" class="btn btn-primary">
+                            <i class="fas fa-book-open"></i>
+                            Explorar Resúmenes
+                        </a>
+                        <a href="#ejercicios" class="btn btn-secondary">
+                            <i class="fas fa-pen-fancy"></i>
+                            Comenzar Ejercicios
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Aprendizaje profesional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Resúmenes -->
+    <section id="resumenes" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-book section-icon"></i>
+                    Resúmenes
+                </h2>
+                <p class="section-subtitle">Material educativo condensado y organizado para un estudio eficiente</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="card-title">Resúmenes Teóricos</h3>
+                    <p class="card-description">
+                        Documentos concisos con los conceptos clave de cada tema, perfectos para repaso rápido.
+                    </p>
+                    <a href="#" class="card-link">
+                        Ver colección
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="card-title">Infografías</h3>
+                    <p class="card-description">
+                        Representaciones visuales que facilitan la comprensión de conceptos complejos.
+                    </p>
+                    <a href="#" class="card-link">
+                        Explorar infografías
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="card-title">Resúmenes en Video</h3>
+                    <p class="card-description">
+                        Contenido audiovisual que explica los temas principales de manera dinámica.
+                    </p>
+                    <a href="#" class="card-link">
+                        Ver videos
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ejercicios -->
+    <section id="ejercicios" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-dumbbell section-icon"></i>
+                    Ejercicios
+                </h2>
+                <p class="section-subtitle">Practica y fortalece tus conocimientos con ejercicios interactivos</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3 class="card-title">Ejercicios de Práctica</h3>
+                    <p class="card-description">
+                        Problemas y preguntas con dificultad gradual para consolidar el aprendizaje.
+                    </p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-list-ol"></i> 150+ ejercicios</span>
+                    </div>
+                    <a href="#" class="btn btn-small">
+                        Comenzar
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="card-title">Evaluaciones</h3>
+                    <p class="card-description">
+                        Tests y exámenes para medir tu progreso y identificar áreas de mejora.
+                    </p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-clock"></i> Auto-evaluación</span>
+                    </div>
+                    <a href="#" class="btn btn-small">
+                        Evaluarse
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="card-title">Ejercicios Interactivos</h3>
+                    <p class="card-description">
+                        Actividades dinámicas que hacen el aprendizaje más entretenido y efectivo.
+                    </p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-gamepad"></i> Modo interactivo</span>
+                    </div>
+                    <a href="#" class="btn btn-small">
+                        Jugar y aprender
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Recursos -->
+    <section id="recursos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-tools section-icon"></i>
+                    Recursos Adicionales
+                </h2>
+                <p class="section-subtitle">Herramientas y materiales complementarios para tu estudio</p>
+            </div>
+            
+            <div class="resources-list">
+                <div class="resource-item">
+                    <i class="fas fa-download resource-icon"></i>
+                    <div>
+                        <h3>Plantillas descargables</h3>
+                        <p>Formatos y plantillas listas para usar en tus proyectos</p>
+                    </div>
+                </div>
+                
+                <div class="resource-item">
+                    <i class="fas fa-calendar-alt resource-icon"></i>
+                    <div>
+                        <h3>Planificador de estudio</h3>
+                        <p>Organiza tu tiempo de estudio de manera eficiente</p>
+                    </div>
+                </div>
+                
+                <div class="resource-item">
+                    <i class="fas fa-users resource-icon"></i>
+                    <div>
+                        <h3>Foro de discusión</h3>
+                        <p>Comparte dudas y soluciones con otros estudiantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3 class="logo-title">Los Boonie Bears</h3>
+                            <p class="logo-subtitle">Centro de Aprendizaje</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Plataforma educativa dedicada a proporcionar recursos de calidad para el aprendizaje continuo.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#resumenes"><i class="fas fa-chevron-right"></i> Resúmenes</a></li>
+                        <li><a href="#ejercicios"><i class="fas fa-chevron-right"></i> Ejercicios</a></li>
+                        <li><a href="#recursos"><i class="fas fa-chevron-right"></i> Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> info@booniebears.com</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad del Aprendizaje, CP 12345</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Los Boonie Bears - Centro de Aprendizaje. Todos los derechos reservados.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+</html>
