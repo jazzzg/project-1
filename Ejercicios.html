@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios - A</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
+    <style>
+        :root {
+            --beige-claro: #F5F5DC;
+            --marron-oscuro: #5B4513;
+            --chocolate: #D2691E;
+            --burlywood: #DEB887;
+            --beige-medio: #F0E6D2;
+            --white: #FFFFFF;
+            --shadow: rgba(91, 69, 19, 0.1);
+        }
+
+        body {
+            background-color: var(--beige-claro);
+            color: var(--marron-oscuro);
+            padding-top: 80px;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+        }
+
+        .header-simple {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px var(--shadow);
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--chocolate);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: var(--beige-medio);
+        }
+
+        .ejercicios-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--marron-oscuro);
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: var(--chocolate);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .cuadrados-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .cuadrado {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(222, 184, 135, 0.3);
+            text-decoration: none;
+            display: block;
+        }
+
+        .cuadrado:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(91, 69, 19, 0.15);
+            border-color: var(--chocolate);
+        }
+
+        .cuadrado-icono {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--burlywood), var(--chocolate));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .cuadrado-titulo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--marron-oscuro);
+            margin-bottom: 15px;
+        }
+
+        .cuadrado-descripcion {
+            color: var(--marron-oscuro);
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .cuadrado-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--chocolate);
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .cuadrado:hover .cuadrado-link {
+            color: var(--marron-oscuro);
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .cuadrados-grid { grid-template-columns: 1fr; }
+            .page-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-simple">
+        <div class="header-content">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Volver al Inicio
+            </a>
+            <div class="logo-mini">
+                <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--marron-oscuro);">
+                    <i class="fas fa-lightbulb" style="color: var(--chocolate);"></i>
+                    A
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="ejercicios-container">
+        <h1 class="page-title">Ejercicios de Práctica</h1>
+        <p class="page-subtitle">Practicá cada tema a tu ritmo</p>
+
+        <div class="cuadrados-grid">
+
+            <a href="#" target="_blank" class="cuadrado">
+                <div class="cuadrado-icono">
+                    <i class="fas fa-arrows-alt-h"></i>
+                </div>
+                <h3 class="cuadrado-titulo">Límites</h3>
+                <p class="cuadrado-descripcion">
+                    Ejercicios de límites.
+                </p>
+                <span class="cuadrado-link">
+                    Ver ejercicios
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+            <a href="#" target="_blank" class="cuadrado">
+                <div class="cuadrado-icono">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <h3 class="cuadrado-titulo">A</h3>
+                <p class="cuadrado-descripcion">
+                    Ejercicios de A.
+                </p>
+                <span class="cuadrado-link">
+                    Ver ejercicios
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+            <a href="#" target="_blank" class="cuadrado">
+                <div class="cuadrado-icono">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <h3 class="cuadrado-titulo">A</h3>
+                <p class="cuadrado-descripcion">
+                    Ejercicios de A.
+                </p>
+                <span class="cuadrado-link">
+                    Ver ejercicios
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+            <a href="#" target="_blank" class="cuadrado">
+                <div class="cuadrado-icono">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <h3 class="cuadrado-titulo">A</h3>
+                <p class="cuadrado-descripcion">
+                    Ejercicios de A.
+                </p>
+                <span class="cuadrado-link">
+                    Ver ejercicios
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+            <a href="#" target="_blank" class="cuadrado">
+                <div class="cuadrado-icono">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <h3 class="cuadrado-titulo">A</h3>
+                <p class="cuadrado-descripcion">
+                    Ejercicios de A.
+                </p>
+                <span class="cuadrado-link">
+                    Ver ejercicios
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+            <a href="#" target="_blank" class="cuadrado">
+                <div class="cuadrado-icono">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <h3 class="cuadrado-titulo">A</h3>
+                <p class="cuadrado-descripcion">
+                    Ejercicios de A.
+                </p>
+                <span class="cuadrado-link">
+                    Ver ejercicios
+                    <i class="fas fa-external-link-alt"></i>
+                </span>
+            </a>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cuadrados = document.querySelectorAll('.cuadrado');
+            cuadrados.forEach((c, i) => {
+                c.style.opacity = '0';
+                c.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    c.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    c.style.opacity = '1';
+                    c.style.transform = 'translateY(0)';
+                }, i * 100);
+            });
+        });
+    </script>
+
+</body>
+</html>
