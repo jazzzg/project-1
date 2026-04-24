@@ -135,7 +135,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 150px 0 80px;
-    background: linear-gradient(135deg, var(--azul-gris-medio) 0%, var(--azul-gris-clarito) 100%);
+    background: linear-gradient(135deg, var(--lila-clarito) 0%, var(--azul-gris-clarito) 100%);
 }
 
 .hero-content {
