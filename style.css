@@ -6,11 +6,11 @@
 }
 
 :root {
-    --beige-claro: #d1dde9;
+    --azul-gris-medio: #9dc3cf;
     --violeta-oscuro:#5B1D7A;
     --violeta-pastel: #9279c5;
     --lila-clarito:#c2a7d0;
-    --beige-medio: #9dc3cf;
+    --azul-gris-clarito: #d1dde9;
     --white: #FFFFFF;
     --shadow: rgba(90, 60, 130, 0.12);
 }
@@ -18,7 +18,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--violeta-oscuro);
-    background-color: var(--beige-claro);
+    background-color: var(--azul-gris-medio);
     line-height: 1.6;
 }
 
@@ -107,7 +107,7 @@ body {
 }
 
 .nav-link:hover {
-    background-color: var(--beige-medio);
+    background-color: var(--azul-gris-clarito);
     color: var(--violeta-pastel);
     transform: translateY(-2px);
 }
@@ -135,7 +135,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 150px 0 80px;
-    background: linear-gradient(135deg, var(--beige-claro) 0%, var(--beige-medio) 100%);
+    background: linear-gradient(135deg, var(--azul-gris-medio) 0%, var(--azul-gris-clarito) 100%);
 }
 
 .hero-content {
@@ -177,7 +177,7 @@ body {
     width: 100%;
     max-width: 400px;
     height: 300px;
-    background: linear-gradient(135deg, var(--white), var(--beige-medio));
+    background: linear-gradient(135deg, var(--white), var(--azul-gris-clarito));
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -387,7 +387,7 @@ body {
 .resource-icon {
     width: 50px;
     height: 50px;
-    background-color: var(--beige-medio);
+    background-color: var(--azul-gris-clarito);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -405,7 +405,7 @@ body {
 /* Footer */
 .footer {
     background-color: var(--violeta-oscuro);
-    color: var(--beige-claro);
+    color: var(--azul-gris-medio);
     padding: 60px 0 30px;
 }
 
@@ -432,7 +432,7 @@ body {
 }
 
 .footer-links a {
-    color: var(--beige-claro);
+    color: var(--azul-gris-medio);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -454,7 +454,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    color: var(--beige-claro);
+    color: var(--azul-gris-medio);
 }
 
 .footer-bottom {
@@ -480,7 +480,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--beige-claro);
+    color: var(--azul-gris-medio);
     text-decoration: none;
     transition: all 0.3s ease;
 }
