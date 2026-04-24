@@ -9,17 +9,18 @@
     --azul-pizarron: #1B2D4F;
     --azul-fluido: #5B9BD5;
     --azul-suave: #A8C8E8;
-    --blanco-hueso: #F7F5F0;
+    --azul-fondo: #DBE9F7;
+    --azul-card: #C2D9EF;
     --verde-salvia: #7BAF8E;
     --arena: #E8D5A3;
     --white: #FFFFFF;
-    --shadow: rgba(27, 45, 79, 0.1);
+    --shadow: rgba(27, 45, 79, 0.12);
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--azul-pizarron);
-    background-color: var(--blanco-hueso);
+    background-color: var(--azul-fondo);
     line-height: 1.6;
 }
 
@@ -136,7 +137,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 150px 0 80px;
-    background: linear-gradient(135deg, var(--blanco-hueso) 0%, rgba(168, 200, 232, 0.2) 100%);
+    background: linear-gradient(135deg, var(--azul-fondo) 0%, rgba(168, 200, 232, 0.4) 100%);
 }
 
 .hero-content {
@@ -251,7 +252,7 @@ body {
 }
 
 .section-alt {
-    background-color: var(--white);
+    background-color: var(--azul-card);
 }
 
 .section-header {
@@ -292,7 +293,7 @@ body {
 }
 
 .card {
-    background-color: var(--white);
+    background-color: var(--azul-card);
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 10px 30px var(--shadow);
@@ -300,7 +301,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 1px solid rgba(91, 155, 213, 0.15);
+    border: 1px solid rgba(91, 155, 213, 0.25);
 }
 
 .card:hover {
@@ -372,7 +373,7 @@ body {
     align-items: center;
     gap: 20px;
     padding: 25px;
-    background-color: var(--white);
+    background-color: var(--azul-fondo);
     border-radius: 12px;
     margin-bottom: 15px;
     box-shadow: 0 5px 15px var(--shadow);
@@ -407,7 +408,7 @@ body {
 /* Footer */
 .footer {
     background-color: var(--azul-pizarron);
-    color: var(--blanco-hueso);
+    color: var(--azul-suave);
     padding: 60px 0 30px;
 }
 
