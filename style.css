@@ -63,7 +63,7 @@ body {
     justify-content: center;
     color: var(--white);
     font-size: 1.5rem;
-    box-shadow: 0 4px 10px rgba(210, 105, 30, 0.2);
+    box-shadow:0 4px 10px rgba(70, 65, 120, 0.20);
 }
 
 .logo-title {
@@ -115,7 +115,7 @@ body {
 .nav-link.active {
     background-color: var(--violeta-pastel);
     color: var(--white);
-    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+    box-shadow: 0 4px 12px rgba(70, 65, 120, 0.25);
 }
 
 .nav-link i {
@@ -218,13 +218,13 @@ body {
 .btn-primary {
     background-color: var(--violeta-pastel);
     color: var(--white);
-    box-shadow: 0 6px 20px rgba(210, 105, 30, 0.3);
+    box-shadow: 0 6px 20px rgba(70, 65, 120, 0.25);
 }
 
 .btn-primary:hover {
     background-color: var(--violeta-oscuro);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(210, 105, 30, 0.4);
+    box-shadow: 0 10px 25px rgba(70, 65, 120, 0.35);
 }
 
 .btn-secondary {
@@ -299,12 +299,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    border: 1px solid rgba(222, 184, 135, 0.3);
+    border: 1px solid rgba(146, 121, 197, 0.25);
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(91, 69, 19, 0.15);
+    box-shadow: 0 20px 40px rgba(70, 65, 120, 0.18);
 }
 
 .card-icon {
@@ -381,7 +381,7 @@ body {
 
 .resource-item:hover {
     transform: translateX(10px);
-    box-shadow: 0 10px 25px rgba(91, 69, 19, 0.15);
+    box-shadow: 0 10px 25px rgba(70, 65, 120, 0.18);
 }
 
 .resource-icon {
